@@ -164,6 +164,7 @@ def preprocess_listings(df):
 
     return df
 
+
 def ingest_listings():
     if not RAW_LISTINGS_PATH.exists():
         raise FileNotFoundError(
