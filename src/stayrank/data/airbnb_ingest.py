@@ -7,7 +7,8 @@ from collections import Counter
 from stayrank.config import (
     RAW_LISTINGS_PATH,
     DB_PATH,
-    PROCESSED_DIR
+    PROCESSED_DIR,
+    BOROUGHS_LIST
 )
 import logging
 
@@ -53,7 +54,7 @@ COLUMNS_RENAME = {
     "id": "listing_id",
     "name": "listing_name",
     "host_identity_verified": "host_verified",
-    "neighbourhood_cleansed": "neighborhood",
+    "neighbourhood_cleansed": "borough",
     "review_scores_rating": "overall_rating",
     "review_scores_cleanliness": "cleanliness_rating",
     "review_scores_location": "location_rating"
@@ -161,6 +162,8 @@ def preprocess_listings(df):
     df["amenities"] = df["amenities"].apply(lambda x: [amenity for amenity in x if amenity in top_amenities])
 
     df = df.rename(columns=COLUMNS_RENAME)
+
+    df = df[df["borough"].isin(BOROUGHS_LIST)]
 
     return df
 

@@ -15,6 +15,7 @@ class Listing(BaseModel):
     # Location information
     city: str
     province: str
+    borough: Optional[str] = None
     neighborhood: Optional[str] = None
     latitude: float
     longitude: float
