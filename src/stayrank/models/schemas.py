@@ -52,3 +52,9 @@ class Recommendation(BaseModel):
     name: str
     score: float
     reasons: Optional[List[str]] = None
+
+class TransitInfo(BaseModel):
+    station_name: str
+    distance_km: float
+    walking_distance: float
+    walking_time_min: float
