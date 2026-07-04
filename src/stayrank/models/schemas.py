@@ -53,8 +53,17 @@ class Recommendation(BaseModel):
     score: float
     reasons: Optional[List[str]] = None
 
+
 class TransitInfo(BaseModel):
     station_name: str
     distance_km: float
     walking_distance: float
     walking_time_min: float
+
+
+class DestinationInfo(BaseModel):
+    name: str
+    latitude: float
+    longitude: float
+    destination_type: str # destination type: either "event" or "place"
+    match_method: str # match method: either "exact" or "fuzzy"
