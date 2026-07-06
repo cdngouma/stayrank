@@ -67,3 +67,11 @@ class DestinationInfo(BaseModel):
     longitude: float
     destination_type: str # destination type: either "event" or "place"
     match_method: str # match method: either "exact" or "fuzzy"
+
+
+class BoroughContext(BaseModel):
+    borough: str
+    dining: float
+    shopping: float
+    parks: float
+    nightlife: float

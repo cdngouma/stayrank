@@ -15,6 +15,7 @@ RAW_EVENTS_PATH = RAW_DIR / "montreal_events.csv"
 PROCESSED_DIR = DATA_DIR / "processed"
 METRO_STATIONS_PATH = PROCESSED_DIR / "montreal_metro_stations.parquet"
 DESTINATIONS_PATH = PROCESSED_DIR / "montreal_destinations.parquet"
+BOROUGH_CONTEXT_PATH = PROCESSED_DIR / "montreal_borough_context.parquet"
 
 # Database path
 DB_PATH = DATA_DIR / "stayrank.duckdb"
