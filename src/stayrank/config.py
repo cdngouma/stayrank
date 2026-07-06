@@ -8,12 +8,14 @@ DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 RAW_LISTINGS_PATH = RAW_DIR / "listings.csv.gz"
 RAW_STM_STOPS_PATH = RAW_DIR / "stm_stops.csv"
-RAW_DESTINATIONS_PATH = RAW_DIR / "montreal_destinations.txt"
+RAW_DESTINATIONS_PATH = RAW_DIR / "montreal_destinations.csv"
 RAW_EVENTS_PATH = RAW_DIR / "montreal_events.csv"
 
 # Processed data paths
 PROCESSED_DIR = DATA_DIR / "processed"
 METRO_STATIONS_PATH = PROCESSED_DIR / "montreal_metro_stations.parquet"
+DESTINATIONS_PATH = PROCESSED_DIR / "montreal_destinations.parquet"
+BOROUGH_CONTEXT_PATH = PROCESSED_DIR / "montreal_borough_context.parquet"
 
 # Database path
 DB_PATH = DATA_DIR / "stayrank.duckdb"
